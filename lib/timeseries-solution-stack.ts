@@ -9,8 +9,8 @@ export class TimeseriesSolutionStack extends cdk.Stack {
 
     const helloFunction = new lambda.Function(this, 'HelloFunction', {
       runtime: lambda.Runtime.NODEJS_12_X,
-      handler: 'hello',
-      code: lambda.Code.asset('./handlers/hello'),
+      handler: 'index.handler',
+      code: lambda.Code.fromAsset('./handlers/hello'),
       timeout: cdk.Duration.seconds(6)
     });
 
